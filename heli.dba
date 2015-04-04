@@ -1,0 +1,16 @@
+hide mouse 
+
+load image "heli.bmp",1
+sprite 1,100,100,1
+
+y=300
+v=0
+x=300
+
+repeat
+
+	if shiftkey()=1 then v=v+5
+	x=mousex()
+	sprite 1,x,(y+v),1
+
+until spacekey()=1
